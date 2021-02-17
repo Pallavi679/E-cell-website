@@ -1,11 +1,13 @@
 <ng-container class="d-flex justify-content-center">
 
   <h1 style="text-align: center; margin-bottom: 5%; font-weight: 700;">Register</h1>
-  <div class="formDiv row d-flex justify-content-center">
+  <div class="formDiv row d-flex justify-content-center" >
     <mat-form-field class="textfields" appearance="outline">
       <mat-label>First Name</mat-label>
-      <input [(ngModel)]="fname" matInput placeholder="Type Here">
+      <input [(ngModel)]="fname" matInput placeholder="Type Here" (keydown)="checkfname($event)">
+      
     </mat-form-field>
+    <!-- <span *ngIf="checkfname.invaild">Enter a vaild Name</span> -->
 
     <mat-form-field class="textfields" appearance="outline">
       <mat-label>Last Name</mat-label>
@@ -22,12 +24,12 @@
       <input [(ngModel)]="contact" type="number" maxlength="10" matInput placeholder="Type Here">
     </mat-form-field>
 
-    <div class="row s textfields">
-      <div class="col-md-6  justify-content-center" style="width: 100%;">
+    <div class="row  xyz">
+      <div class="col-md-6  justify-content-center" >
         <mat-form-field style="width: 100%; " appearance="outline">
           <mat-label>Year</mat-label>
           <mat-select [(ngModel)]="class">
-            <mat-option style="background-color: rgb(170, 97, 238); font-weight: 700;" *ngFor="let y of yData "
+            <mat-option style="background-color:#018abd; font-weight: 700;" *ngFor="let y of yData "
               [value]="y.name">
               {{y.name}}
             </mat-option>
@@ -38,7 +40,7 @@
         <mat-form-field style="width: 100%;" appearance="outline">
           <mat-label>Division</mat-label>
           <mat-select [(ngModel)]="division">
-            <mat-option style="background-color: rgb(170, 97, 238); font-weight: 700;" *ngFor="let d of dData "
+            <mat-option style="background-color:#018abd; font-weight: 700;" *ngFor="let d of dData "
               [value]="d.num">
               {{d.num}}
             </mat-option>
@@ -51,6 +53,6 @@
       <input [(ngModel)]="rollNo" type="number" maxlength="3" matInput placeholder="Type Here">
     </mat-form-field>
 
-    <button class="textfields" (click)="membership()" mat-raised-button color="primary">{{buttonText}}</button>
+    <button class="textfields" (click)="membership()" mat-raised-button color="primary" [disabled]="!fname || !lname || !email || !phone">{{buttonText}}</button>
   </div>
 </ng-container>

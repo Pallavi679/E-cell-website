@@ -6,9 +6,9 @@ import { AngularFireModule } from 'angularfire2'
 import { AngularFirestoreModule } from 'angularfire2/firestore'
 import { AngularFireStorageModule } from 'angularfire2/storage'
 import { AngularFireAuthModule } from 'angularfire2/auth'
-
+import{ReactiveFormsModule} from '@angular/forms'
 import { environment } from '../environments/environment'
-
+import {FormsModule} from '@angular/forms'
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
@@ -35,9 +35,11 @@ const routes: Routes=[
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireAuthModule,
+    FormsModule,
     CoreModule,
     SharedModule,
-    HomeModule
+    HomeModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

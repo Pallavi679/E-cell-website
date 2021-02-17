@@ -78,10 +78,11 @@ export class Initiative{
 }
 
 export class Contact{
-    fname: string
-    lname: string
+    name:string
+    // lname: string
     email:string
-    phone: number
+    phone:string
+    message:string
 }
 
 export class Membership{

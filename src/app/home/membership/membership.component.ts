@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Upcoming, Years, Division } from 'src/app/home/home-model';
 import { DatahandlerService } from '../datahandler.service';
 import {ActivatedRoute} from '@angular/router';
-
+import { FormGroup,FormBuilder,FormControl,Validators, NgForm} from '@angular/forms';
 
 
 @Component({
@@ -35,6 +35,14 @@ export class MembershipComponent implements OnInit {
      
   }
 
+  checkfname(event){
+    event=this.fname
+    if(event.valu=="^[a-ZA-Z]+$"){
+      console.log("enter vaild name")
+    }else{
+      console.log("zdxcfgv")
+    }
+  }
   ngOnInit() {
     this.getData();
     this.getYears();
