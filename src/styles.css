@@ -6,6 +6,7 @@ html,body{
     overflow: scroll;
     overflow-x: hidden;
     
+    
 }
 
 ::-webkit-scrollbar {
@@ -17,7 +18,7 @@ body{
     /*background: url("https://firebasestorage.googleapis.com/v0/b/e-cell-sakec.appspot.com/o/homepage%2F2558256.png?alt=media&token=ab17d5ab-08a4-4760-81c4-1550d438242b");*/
     /* background: url("assets/leaf.png");  */
     background-repeat: repeat;
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.699);
     
 }
 

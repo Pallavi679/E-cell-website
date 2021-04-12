@@ -1,103 +1,154 @@
-
-<ng-container style="min-width: 100%; min-height: 150%; z-index: 1; position: fixed;" *ngIf="loading" >
+<ng-container style="min-width: 100%; min-height: 150%; z-index: 1; position: fixed;" *ngIf="loading">
   <div class="d-flex justify-content-center loading">
-    <p class="loader" >Loading</p>
+
+    <div class="loader">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
   </div>
 </ng-container>
 
-<ng-container >
-  <div class = "container back " *ngFor="let h of hData">
-    <div class="row">
-        <div class="col d-flex justify-content-center">
-          <h1 style="font-family:'Bebas Neue', cursive;" class="tag" >{{h.tag}}</h1>
-        </div>
+<ng-container>
+  <div class="container back ">
+    <!--*ngFor="let h of hData"-->
+    <div class="col">
+      <div>
+        <img routerLink="/" class="logo img-responsive img-fluid" height="300px" width="200px"
+        src="https://firebasestorage.googleapis.com/v0/b/e-cell-sakec.appspot.com/o/homepage%2FOld%20Logo%201%20(1).png?alt=media&token=9238deda-98d3-4987-95f7-00ce8871dace">
+      </div>
+      <p style="font-family:'Bebas Neue', cursive; color: rgb(18, 206, 231);" class="about-container">
+        E-CELL SAKEC</p>
+
     </div>
+    <div class="col">
+      <p style="font-family:'Bebas Neue', cursive; color: rgb(18, 206, 231); font-size: 20px;" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+    </div>
+    <div class="row">
+
+      <div class="col justify-content-center">
+        <p style="font-family:'Bebas Neue', cursive; color: rgb(18, 206, 231);" id="typingtext" class="tag tw">
+
+        </p>
+      </div>
+
+    </div>
+    <div class="col button-more">
+      <button type="button" class="btn btn-success">Success</button>
+      <button type="button" class="btn btn-danger">Danger</button>
+    </div>
+
+  </div>
+  <div class="arrow">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
 
-  
-  
+
   <div class=" row d-flex justify-content-center" *ngIf="upId">
-  
+
     <div class="row d-flex justify-content-center" style="width: 100%;">
       <p class="about">Upcoming Event</p>
     </div>
-  
-    <div class="row d-flex justify-content-center upcoming" style="width: 100%; margin-top: 2%;" >
-  
+
+    <div class="row d-flex justify-content-center upcoming" style="width: 100%; margin-top: 2%;">
+
       <div class="col-sm d-flex justify-content-left ">
         <img class="img-fluid upcomingimage shadow" src="{{upImage}}}" />
       </div>
-  
+
       <div class="col d-flex">
-  
+
         <div class="upcomingcont">
           <p class="about"><b>{{upTitle}}</b></p>
           <p>{{upDesc | truncatetext:300}}<span class="readmore" routerLink="upcoming/{{upId}}"> ...read more</span></p>
           <ng-container *ngIf="regEnabled; else customLink">
-            <button type="button" routerLink="register/{{upId}}" style="float: bottom; font-weight: 700;" class="btn btn-success text-white">Register</button>
+            <button type="button" routerLink="register/{{upId}}" style="float: bottom; font-weight: 700;"
+              class="btn btn-success text-white">Register</button>
           </ng-container>
           <ng-template #customLink>
-            <button type="button" style="float: bottom; font-weight: 700;" class="btn btn-success text-white"><a target="_blank" style="color: #fff; text-decoration: none;" attr.href="{{upLink}}" >Register</a></button>
+            <button type="button" style="float: bottom; font-weight: 700;" class="btn btn-success text-white"><a
+                target="_blank" style="color: #fff; text-decoration: none;" attr.href="{{upLink}}">Register</a></button>
           </ng-template>
         </div>
       </div>
-      
+
     </div>
-  
+
   </div>
-  
-  
-  
-  <div class="row d-flex justify-content-center blogsec" >
-  
+
+  <div class=" about-background">
+    <h2 class="h2 about text-center">Our Aims</h2>
+    <div class="row">
+
+    </div>
+  </div>
+
+  <div class="row d-flex justify-content-center blogsec">
+
     <div class="row d-flex justify-content-center" style="height: auto;" *ngFor="let b of bData">
-  
-      <div class="row d-flex justify-content-center" style="width: 100%; margin-top: 5%; ">
-        <p class="about">"{{b.title}}"</p>
+
+      <div class="row d-flex justify-content-center" style="width: 100%; margin-top: 5%; " data-aos="fade-right "
+        data-aos-duration="3000">
+        <p class="about blog">"{{b.title}}"</p>
       </div>
-      
+
       <div class="blogcont row d-flex justify-content-center" style="width: 100%; ">
         <div class="col" style="display: inline; ">
-  
+
           <p>{{b.content | truncatetext:250}}<span class="readmore" routerLink="/blog">read more</span></p>
-  
+
         </div>
       </div>
-  
+
       <div class="blogauth row d-flex justify-content-center" style="width: 100%;">
         <p><b> - By {{b.author}}</b></p>
       </div>
-    
+
     </div>
-  
+
   </div>
   <hr style="width:80% ;height:2px;border-width:2px;background-color:black;">
   <div class="shadow p-2">
     <div class="row d-flex justify-content-center">
-      <div style="width: 100%;" class="row d-flex justify-content-center" >
-            <p class="about">Our Initiatives</p>
+      <div style="width: 100%;" class="row d-flex justify-content-center">
+        <p class="about">Our Initiatives</p>
       </div>
-      
-        <div style="width: 100%; " class="d-flex justify-content-center">
+
+      <div style="width: 100%; " class="d-flex justify-content-center">
         <div class="mainrow ">
           <ng-container>
-               <div  class="shadow p-3" id="mycont">
-    
-                <div class="card bg-transparent text-white">
-                  <img class="card-img h-100 d-inline-block myimg" src="{{initiativeImg}}" alt="Card image" (load)="loading = false"/>
-                  <div class="card-img-overlay d-flex align-items-end" >
-                  </div>
-                   </div>
-                  
-              </div>      
+            <div class="shadow p-3" id="mycont" data-aos="zoom-in-up" data-aos-duration="3000">
+
+              <div class="card bg-transparent text-white">
+                <img class="card-img h-100 d-inline-block myimg" src="{{initiativeImg}}" alt="Card image"
+                  (load)="loading = false" />
+                <div class="card-img-overlay d-flex align-items-end">
+                </div>
+              </div>
+
+            </div>
           </ng-container>
         </div>
-        </div>
-      
+      </div>
+
     </div>
-    
+
   </div>
-  
+
 </ng-container>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/angular-animate/1.8.2/angular-animate.min.js"></script>
+<script>
+  var typed = new Typed('#typed', {
+    stringsElement: '#typed-strings',
+    typeSpeed: 80,
+    startDelay: 5,
+    backspeed: 80,
+    loop: true
 
-
+  });
+</script>

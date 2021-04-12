@@ -14,6 +14,7 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './home/home.module';
 import { RouterModule, Routes } from '@angular/router';
+//import { TypingAnimationModule } from 'angular-typing-animation'
 // import { MembershipComponent } from './mem/membership.component';
 
 
@@ -40,6 +41,7 @@ const routes: Routes=[
     SharedModule,
     HomeModule,
     ReactiveFormsModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

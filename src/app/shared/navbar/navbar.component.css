@@ -21,27 +21,28 @@
 }
 nav{
     width: 100%;
-    height: 100px;
-    background-color:#FFFFFF;
+    height: 80px;
+    background-color:#000000;
      box-shadow: 0px 0px 10px grey;
     
 }
 
 nav ul{
     float: right;
-    margin-right:30px;
+    margin-right:20px;
    
 }
 nav ul li{
     margin-top: 25px;
     list-style-type: none;
     display: inline-block;
+    color: white;
 }
 
 nav ul li a{
     text-decoration: none;
     color: #000000;
-    padding: 30px;
+    padding: 20px;
     font-weight: bold;
     
 }
@@ -58,8 +59,8 @@ nav ul li a{
 img.logo{
     margin-top: 10px;
     margin-left: 40px;
-    width: 85px;
-    height: 80px;
+    width: 65px;
+    height: 60px;
 }
 
 #check{
@@ -78,7 +79,7 @@ img.logo{
 }
 
 .spanner{
-    margin-left: 35px;
+    margin-left: 20px;
 }
 
 .footerlogo{
@@ -104,8 +105,9 @@ img.logo{
     
     text-underline-position: none; 
     transition: transform .5s; /* Animation */
-    filter: drop-shadow(1px 1px 1px #222); 
+    filter: drop-shadow(1px 1px 1px rgb(43, 181, 223)); 
     transform: scale(1.0);
+    color: tomato;
     
   }
 
@@ -144,7 +146,7 @@ img.logo{
     color: #fff;
     font-weight: 700; 
     font-size: 20px; 
-    margin-top: 3%;
+    margin-top: 2%;
     margin-bottom: 1%;
     padding: 10px;
   }
@@ -266,7 +268,8 @@ img.logo{
 .headmore{
    
    
-    padding:15px;
+    padding-right: 15px;
+    padding-left: 15px;
   
     width: 13.5%;
     
@@ -276,7 +279,8 @@ img.logo{
     
     text-underline-position: none; 
     transition: transform .3s; /* Animation */
-    filter: drop-shadow(1px 1px 1px #222); 
+    filter: drop-shadow(1px 1px 1px rgb(193, 199, 209)); 
     transform: scale(1.0);
+    
     
   }

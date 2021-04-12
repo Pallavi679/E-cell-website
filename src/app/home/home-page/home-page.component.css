@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arapey&family=Crimson+Pro:wght@200&family=Old+Standard+TT&family=Playfair+Display&display=swap');
+
 .tag{
-  font-size: 90px;
-  margin-top: 5%;
+  font-size: 72px;
+  margin-top: 0%;
   margin-left:35%;
   margin-right: 35%;
   margin-bottom: 15%;
-  color: #000;
+  color: #ddd;
   font-style: italic;
   filter: drop-shadow(3px 3px 3px #222); 
 }
@@ -19,41 +20,114 @@
 }
 
 .loader {
-  color: #fff;
-  font-size: 80px;
-  font-weight: 700;
-  font-family: Quicksand, sans-serif;
-  background: linear-gradient(to right, #751fd6 10%, #fff 50%, #751fd6 60%);
-  background-size: auto auto;
-  background-clip: border-box;
-  background-size: 200% auto;
-  color: #fff;
-  background-clip: text;
-  text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: textclip 1.5s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  margin-left: 10%;
+  transform: translate3d(-50%, -50%, 0);
+}
+.dot {
+  width: 24px;
+  height: 24px;
+  background: #3ac;
+  border-radius: 100%;
   display: inline-block;
-  margin-top: 15%;
+  animation: slide 1s infinite;
+}
+.dot:nth-child(1) {
+  animation-delay: 0.1s;
+  background: #32aacc;
+}
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+  background: #64aacc;
+}
+.dot:nth-child(3) {
+  animation-delay: 0.3s;
+  background: #96aacc;
+}
+.dot:nth-child(4) {
+  animation-delay: 0.4s;
+  background: #c8aacc;
+}
+.dot:nth-child(5) {
+  animation-delay: 0.5s;
+  background: #faaacc;
+}
+@-moz-keyframes slide {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-o-keyframes slide {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes slide {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.btn{
+  margin: 5px;
+}
+.button-more{
+  margin-top: -200px;
+}
+.back-left{
+  background-color: #000;
 }
 
-@keyframes textclip {
-	to {
-		background-position: 200% center;
-	}
+.tw{
+  margin-left: 20px;
 }
-
-
 
 .tagcont{
   margin-top: 100px;
 }
 
 .back{
-  background-image: url('https://firebasestorage.googleapis.com/v0/b/e-cell-sakec.appspot.com/o/homepage%2FWave-100s-1617px%20(4).png?alt=media&token=fbd55f89-f412-49b6-8336-6e4a6a63dda0');
+  /* background-image: url('https://firebasestorage.googleapis.com/v0/b/e-cell-sakec.appspot.com/o/homepage%2FWave-100s-1617px%20(4).png?alt=media&token=fbd55f89-f412-49b6-8336-6e4a6a63dda0'); */
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/e-cell-sakec.appspot.com/o/homepage%2Fwp2126141.jpg?alt=media&token=59e7e322-7d0d-4603-a036-25ff0c85ce44');
   background-repeat: no-repeat;
+  min-height: 100%;
   min-width: 100%;
   background-size: 100% 100%;
+  
   
 }
 
@@ -65,7 +139,17 @@
   filter: drop-shadow(1px 1px 1px #222); 
   
 }
-
+.blog{
+  margin-top: 100px;
+}
+.about-container{
+  font-family: 'Old Standard TT', serif;
+  font-weight: 900;
+  font-size: 80px;
+  color: black;
+ padding-top: 50px;
+ /* padding-left: 5px; */
+}
 .about{
   /* font-family: Quicksand;  */
   font-family: 'Old Standard TT', serif;
@@ -177,14 +261,18 @@
     
   }
 
-
+.blog{
+  margin-top: 0px;
+}
   .tag{
     font-size: 40px;
     text-align: center;
-    margin-top: 20%;
+    margin-top: 9%;
     margin-left: 30%;
     margin-right: 30%;
     margin-bottom: 40%;
+    padding:30%;
+    align-content: center;
     filter: drop-shadow(3px 3px 3px #222); 
   }
 
@@ -250,5 +338,117 @@
 
 }
 
+.arrow{
+  position: absolute;
+  top:60%;
+  left:50%;
+  transform: translate(-50%, -50%);
 
+}
+.arrow span{
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 5px solid #06A8FF;
+  border-right: 5px solid #06A8FF;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: scroll 2s infinite;
+}
+.arrow span:nth-child(2){
+  animation-delay: -.2s;
+}
 
+.arrow span:nth-child(3){
+  animation-delay: -.4s;
+}
+@keyframes scroll{
+  0%{
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50%{
+      opacity: 1;
+     
+  }
+  100%{
+      opacity: 0;
+      transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+.spacing{
+  padding: 15px;
+  margin-bottom: 15px;
+}
+@media(max-width:768px){
+  .arrow{
+      position: absolute;
+      top:55%;
+      left:50%;
+      transform: translate(-50%, -50%);
+  
+  }
+  .arrow span{
+      display: block;
+      width: 30px;
+      height: 30px;
+      border-bottom: 5px solid #06A8FF;
+      border-right: 5px solid #06A8FF;
+      transform: rotate(45deg);
+      margin: -10px;
+      animation: scroll 2s infinite;
+  }
+  .arrow span:nth-child(2){
+      animation-delay: -.2s;
+  }
+  
+  .arrow span:nth-child(3){
+      animation-delay: -.4s;
+  }
+}
+@media(max-width:320px){
+  .arrow{
+      position: absolute;
+      top:70%;
+      left:50%;
+      transform: translate(-50%, -50%);
+  
+  }
+  .arrow span{
+      display: block;
+      width: 30px;
+      height: 30px;
+      border-bottom: 5px solid #06A8FF;
+      border-right: 5px solid #06A8FF;
+      transform: rotate(45deg);
+      margin: -10px;
+      animation: scroll 2s infinite;
+  }
+  .arrow span:nth-child(2){
+      animation-delay: -.2s;
+  }
+  
+  .arrow span:nth-child(3){
+      animation-delay: -.4s;
+  }
+} 
+.about-background{
+  background-image: url('https://c.stocksy.com/a/NFW500/z9/1315601.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+@media screen and (max-width: 800px){
+.tag[_ngcontent-c1] {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 7%;
+    margin-left: -3%;
+    margin-right: 6%;
+    margin-bottom: 40%;
+    padding: 30%;
+    align-content: center;
+    filter: drop-shadow(3px 3px 3px #222);
+}
+}
